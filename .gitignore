@@ -12,6 +12,7 @@
 .vscode/
 
 # Gradle
+.gradle
 .gradle/
 /build/
 .gradletasknamecache
