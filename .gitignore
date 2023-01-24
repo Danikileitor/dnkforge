@@ -20,6 +20,7 @@ gradle-app.setting
 !gradle-wrapper.jar
 !gradle-wrapper.properties
 /src/test/
+run/
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
