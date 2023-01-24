@@ -9,7 +9,15 @@
 *.user
 *.userosscache
 *.sln.docstates
+
+# Gradle
 .gradle/
+/build/
+.gradletasknamecache
+gradle-app.setting
+!gradle-wrapper.jar
+!gradle-wrapper.properties
+/src/test/
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
