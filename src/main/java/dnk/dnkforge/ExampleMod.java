@@ -1,4 +1,4 @@
-package examplemod;
+package dnk.dnkforge;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
