@@ -37,10 +37,10 @@ public class DNKforge
     // Create a Deferred Register to hold Items which will all be registered under the "dnkforge" namespace
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
 
-    // Creates a new Block with the id "dnkforge:example_block", combining the namespace and path
-    public static final RegistryObject<Block> EXAMPLE_BLOCK = BLOCKS.register("example_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE)));
-    // Creates a new BlockItem with the id "dnkforge:example_block", combining the namespace and path
-    public static final RegistryObject<Item> EXAMPLE_BLOCK_ITEM = ITEMS.register("example_block", () -> new BlockItem(EXAMPLE_BLOCK.get(), new Item.Properties()));
+    // Creates a new Block with the id "dnkforge:dnk_block", combining the namespace and path
+    public static final RegistryObject<Block> DNK_BLOCK = BLOCKS.register("dnk_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE)));
+    // Creates a new BlockItem with the id "dnkforge:dnk_block", combining the namespace and path
+    public static final RegistryObject<Item> DNK_BLOCK_ITEM = ITEMS.register("dnk_block", () -> new BlockItem(DNK_BLOCK.get(), new Item.Properties()));
 
     public DNKforge()
     {
@@ -71,7 +71,7 @@ public class DNKforge
     private void addCreative(CreativeModeTabEvent.BuildContents event)
     {
         if (event.getTab() == CreativeModeTabs.BUILDING_BLOCKS)
-            event.accept(EXAMPLE_BLOCK_ITEM);
+            event.accept(DNK_BLOCK_ITEM);
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
