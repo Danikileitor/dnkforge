@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "": { "model": "dnkforge:block/dnk_block" }
+    }
+}
