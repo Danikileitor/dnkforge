@@ -2,9 +2,12 @@ package dnk.dnkforge;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.enchantment.EnchantmentCategory;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -36,11 +39,15 @@ public class DNKforge
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MODID);
     // Create a Deferred Register to hold Items which will all be registered under the "dnkforge" namespace
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
+    // Create a Deferred Register to hold Enchantments which will all be registered under the "dnkforge" namespace
+    public static final DeferredRegister<Enchantment> ENCHANTMENTS = DeferredRegister.create(ForgeRegistries.ENCHANTMENTS, MODID);
 
     // Creates a new Block with the id "dnkforge:dnk_block", combining the namespace and path
     public static final RegistryObject<Block> DNK_BLOCK = BLOCKS.register("dnk_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE)));
     // Creates a new BlockItem with the id "dnkforge:dnk_block", combining the namespace and path
     public static final RegistryObject<Item> DNK_BLOCK_ITEM = ITEMS.register("dnk_block", () -> new BlockItem(DNK_BLOCK.get(), new Item.Properties()));
+    // Creates a new Enchantment with the id "dnkforge:nightvision", combining the namespace and path
+    public static final RegistryObject<Enchantment> NIGHTVISION = ENCHANTMENTS.register("nightvision", () -> new NightVision(Enchantment.Rarity.UNCOMMON, EnchantmentCategory.ARMOR_HEAD, EquipmentSlot.MAINHAND));
 
     public DNKforge()
     {
@@ -53,6 +60,8 @@ public class DNKforge
         BLOCKS.register(modEventBus);
         // Register the Deferred Register to the mod event bus so items get registered
         ITEMS.register(modEventBus);
+        // Register the Deferred Register to the mod event bus so enchantments get registered
+        ENCHANTMENTS.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
