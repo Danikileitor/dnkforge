@@ -1,5 +1,6 @@
-package dnk.dnkforge;
+package dnk.dnkforge.enchantment;
 
+import dnk.dnkforge.DNKforge;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -12,7 +13,7 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 
 @EventBusSubscriber(modid = DNKforge.MODID)
 public class NightVision extends Enchantment {
-    protected NightVision(Rarity pRarity, EnchantmentCategory pCategory, EquipmentSlot... pApplicableSlots){
+    public NightVision(Rarity pRarity, EnchantmentCategory pCategory, EquipmentSlot... pApplicableSlots){
         super(pRarity, pCategory, pApplicableSlots);
     }
 
@@ -23,7 +24,7 @@ public class NightVision extends Enchantment {
 
     @SubscribeEvent
     public static void onPlayerTick(TickEvent.PlayerTickEvent e){
-        if (EnchantmentHelper.getTagEnchantmentLevel(DNKforge.NIGHTVISION.get(), e.player.getItemBySlot(EquipmentSlot.HEAD)) > 0) {
+        if (EnchantmentHelper.getTagEnchantmentLevel(ModEnchantments.NIGHTVISION.get(), e.player.getItemBySlot(EquipmentSlot.HEAD)) > 0) {
             MobEffectInstance playerEffect = new MobEffectInstance(MobEffects.NIGHT_VISION, 210, 100, false, false);
             e.player.addEffect(playerEffect);
         }

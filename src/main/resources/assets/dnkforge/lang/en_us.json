@@ -1,5 +1,6 @@
 {
-    "item.dnkforge.dnk_block": "DNK BLOCK",
-    "block.dnkforge.dnk_block": "DNK BLOCK",
+    "creativemodetab.dnkforge_tab": "DNK Forge",
+    "item.dnkforge.dnk_item": "DNK ITEM",
+    "block.dnkforge.dnk_block": "Encarnita",
     "enchantment.dnkforge.nightvision": "Night Vision"
 }

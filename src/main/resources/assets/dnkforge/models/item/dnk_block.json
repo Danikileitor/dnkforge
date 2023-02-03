@@ -1,6 +1,3 @@
 {
-  "parent": "dnkforge:block/dnk_block",
-  "textures": {
-    "layer0": "dnkforge:item/dnk_block"
-  }
- }
+  "parent": "dnkforge:block/dnk_block"
+}
