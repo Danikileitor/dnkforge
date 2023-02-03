@@ -2,5 +2,9 @@
     "creativemodetab.dnkforge_tab": "DNK Forge",
     "item.dnkforge.dnk_item": "DNK ITEM",
     "block.dnkforge.dnk_block": "Encarnita",
-    "enchantment.dnkforge.nightvision": "Night Vision"
+    "enchantment.dnkforge.nightvision": "Night Vision",
+    "advancements.dnkforge.dnkforge.title": "DNK Forge",
+    "advancements.dnkforge.dnkforge.description": "You don't know what awaits you...",
+    "advancements.dnkforge.nightvision.title": "Night Vision",
+    "advancements.dnkforge.nightvision.description": "Get your first Night Vision helmet"
 }

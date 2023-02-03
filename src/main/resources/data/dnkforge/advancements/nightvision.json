@@ -1,0 +1,34 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:enchanted_book"
+    },
+    "title": {
+        "translate": "advancements.dnkforge.nightvision.title"
+      },
+      "description": {
+        "translate": "advancements.dnkforge.nightvision.description"
+      },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "dnkforge:dnkforge",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "item": {
+          "enchantments": [
+            {
+              "enchantment": "dnkforge:nightvision"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 10
+  }
+}

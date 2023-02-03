@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "dnkforge:dnk_item"
+    },
+    "title": {
+      "translate": "advancements.dnkforge.dnkforge.title"
+    },
+    "description": {
+      "translate": "advancements.dnkforge.dnkforge.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "background": "minecraft:textures/block/blue_concrete.png"
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["dnkforge:dnk_block"]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "loot": ["dnkforge:dnk_item"],
+    "experience": 10
+  }
+}

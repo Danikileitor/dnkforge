@@ -1,3 +1,6 @@
 {
-    "enchantment.dnkforge.nightvision": "Visión Nocturna"
+    "enchantment.dnkforge.nightvision": "Visión Nocturna",
+    "advancements.dnkforge.dnkforge.description": "No sabes lo que te espera...",
+    "advancements.dnkforge.nightvision.title": "Visión Nocturna",
+    "advancements.dnkforge.nightvision.description": "Consigue tu primer casco con Visión Nocturna"
 }
