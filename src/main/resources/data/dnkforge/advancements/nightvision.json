@@ -148,6 +148,7 @@
     ]
   ],
   "rewards": {
+    "loot": ["dnkforge:items/night_vision"],
     "experience": 10
   }
 }
