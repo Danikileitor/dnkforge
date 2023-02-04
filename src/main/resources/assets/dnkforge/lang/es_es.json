@@ -1,6 +1,12 @@
 {
+    "item.dnkforge.night_vision": "Visión Nocturna",
+    "item.dnkforge.lapislazulisword": "Espada de lapislázuli",
     "enchantment.dnkforge.nightvision": "Visión Nocturna",
-    "advancements.dnkforge.dnkforge.description": "No sabes lo que te espera...",
+    "advancements.dnkforge.root.description": "No sabes lo que te espera...",
+    "advancements.dnkforge.encarnita.title": "¡Eso no tiene css!",
+    "advancements.dnkforge.encarnita.description": "Has descubierto los males que tiene aprender lenguaje de marcas",
     "advancements.dnkforge.nightvision.title": "Visión Nocturna",
-    "advancements.dnkforge.nightvision.description": "Consigue tu primer casco con Visión Nocturna"
+    "advancements.dnkforge.nightvision.description": "Consigue tu primer casco con Visión Nocturna",
+    "advancements.dnkforge.lapislazulisword.title": "¡Espada de Lapislázuli!",
+    "advancements.dnkforge.lapislazulisword.description": "Consigue tu primera espada de lapislázuli"
 }

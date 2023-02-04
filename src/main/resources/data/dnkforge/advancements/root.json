@@ -4,14 +4,15 @@
       "item": "dnkforge:dnk_item"
     },
     "title": {
-      "translate": "advancements.dnkforge.dnkforge.title"
+      "translate": "advancements.dnkforge.root.title"
     },
     "description": {
-      "translate": "advancements.dnkforge.dnkforge.description"
+      "translate": "advancements.dnkforge.root.description"
     },
     "frame": "task",
-    "show_toast": true,
-    "announce_to_chat": true,
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false,
     "background": "minecraft:textures/block/blue_concrete.png"
   },
   "criteria": {
@@ -20,14 +21,10 @@
       "conditions": {
         "items": [
           {
-            "items": ["dnkforge:dnk_block"]
+            "items": ["dnkforge:dnk_item"]
           }
         ]
       }
     }
-  },
-  "rewards": {
-    "loot": ["dnkforge:dnk_item"],
-    "experience": 10
   }
 }

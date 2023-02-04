@@ -1,33 +1,152 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:enchanted_book"
+      "item": "dnkforge:night_vision"
     },
     "title": {
-        "translate": "advancements.dnkforge.nightvision.title"
-      },
-      "description": {
-        "translate": "advancements.dnkforge.nightvision.description"
-      },
-    "frame": "challenge",
+      "translate": "advancements.dnkforge.nightvision.title"
+    },
+    "description": {
+      "translate": "advancements.dnkforge.nightvision.description"
+    },
+    "frame": "goal",
     "show_toast": true,
-    "announce_to_chat": true
+    "announce_to_chat": true,
+    "hidden": false
   },
-  "parent": "dnkforge:dnkforge",
+  "parent": "dnkforge:root",
   "criteria": {
-    "requirement": {
+    "leather_helmet": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "item": {
-          "enchantments": [
-            {
-              "enchantment": "dnkforge:nightvision"
-            }
-          ]
-        }
+        "items": [
+          {
+            "items": [
+              "minecraft:leather_helmet"
+            ],
+            "enchantments": [
+              {
+                "enchantment": "dnkforge:nightvision"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "chainmail_helmet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:chainmail_helmet"
+            ],
+            "enchantments": [
+              {
+                "enchantment": "dnkforge:nightvision"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "iron_helmet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:iron_helmet"
+            ],
+            "enchantments": [
+              {
+                "enchantment": "dnkforge:nightvision"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "diamond_helmet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:diamond_helmet"
+            ],
+            "enchantments": [
+              {
+                "enchantment": "dnkforge:nightvision"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "golden_helmet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:golden_helmet"
+            ],
+            "enchantments": [
+              {
+                "enchantment": "dnkforge:nightvision"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "netherite_helmet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:netherite_helmet"
+            ],
+            "enchantments": [
+              {
+                "enchantment": "dnkforge:nightvision"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "turtle_helmet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:turtle_helmet"
+            ],
+            "enchantments": [
+              {
+                "enchantment": "dnkforge:nightvision"
+              }
+            ]
+          }
+        ]
       }
     }
   },
+  "requirements": [
+    [
+      "leather_helmet",
+      "chainmail_helmet",
+      "iron_helmet",
+      "diamond_helmet",
+      "golden_helmet",
+      "netherite_helmet",
+      "turtle_helmet"
+    ]
+  ],
   "rewards": {
     "experience": 10
   }

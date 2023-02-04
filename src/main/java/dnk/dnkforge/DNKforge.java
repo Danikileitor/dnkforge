@@ -51,10 +51,17 @@ public class DNKforge
     {
         if (event.getTab() == ModCreativeModeTabs.DNKFORGE_TAB) {
             event.accept(ModBlocks.DNK_BLOCK);
+            event.accept(ModItems.DNK_ITEM);
+            event.accept(ModItems.NIGHT_VISION);
+            event.accept(ModItems.LAPISLAZULISWORD);
         }
 
         if (event.getTab() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.DNK_BLOCK);
+        }
+
+        if (event.getTab() == CreativeModeTabs.COMBAT) {
+            event.accept(ModItems.LAPISLAZULISWORD);
         }
     }
 

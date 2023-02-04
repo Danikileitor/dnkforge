@@ -1,10 +1,16 @@
 {
     "creativemodetab.dnkforge_tab": "DNK Forge",
     "item.dnkforge.dnk_item": "DNK ITEM",
+    "item.dnkforge.night_vision": "Night Vision",
+    "item.dnkforge.lapislazulisword": "Lapislazuli Sword",
     "block.dnkforge.dnk_block": "Encarnita",
     "enchantment.dnkforge.nightvision": "Night Vision",
-    "advancements.dnkforge.dnkforge.title": "DNK Forge",
-    "advancements.dnkforge.dnkforge.description": "You don't know what awaits you...",
+    "advancements.dnkforge.root.title": "DNK Forge",
+    "advancements.dnkforge.root.description": "You don't know what awaits you...",
+    "advancements.dnkforge.encarnita.title": "That doesn't have css!",
+    "advancements.dnkforge.encarnita.description": "You have discovered the evils of learning markup language",
     "advancements.dnkforge.nightvision.title": "Night Vision",
-    "advancements.dnkforge.nightvision.description": "Get your first Night Vision helmet"
+    "advancements.dnkforge.nightvision.description": "Get your first Night Vision helmet",
+    "advancements.dnkforge.lapislazulisword.title": "Lapislazuli Sword!",
+    "advancements.dnkforge.lapislazulisword.description": "Get your first Lapislazuli Sword"
 }

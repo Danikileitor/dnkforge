@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["#", "#", "G"],
+  "key": {
+    "#": {
+      "item": "minecraft:lapis_block"
+    },
+    "G": {
+      "item": "minecraft:gold_block"
+    }
+  },
+  "result": {
+    "item": "dnkforge:lapislazulisword",
+    "count": 1
+  }
+}

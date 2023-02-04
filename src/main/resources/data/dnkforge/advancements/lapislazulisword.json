@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "item": "dnkforge:lapislazulisword"
+    },
+    "title": {
+      "translate": "advancements.dnkforge.lapislazulisword.title"
+    },
+    "description": {
+      "translate": "advancements.dnkforge.lapislazulisword.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "dnkforge:root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "dnkforge:lapislazulisword"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 10
+  }
+}

@@ -1,16 +1,16 @@
 {
-    "type": "minecraft:crafting_shapeless",
-    "group": "dnk_block",
-    "ingredients": [
-        {
-            "item": "minecraft:cobblestone"
-        },
-        {
-            "tag": "minecraft:planks"
-        }
-    ],
-    "result": {
-        "item": "dnkforge:dnk_block",
-        "count": 2
+  "type": "minecraft:crafting_shapeless",
+  "group": "dnk_block",
+  "ingredients": [
+    {
+      "item": "minecraft:cobblestone"
+    },
+    {
+      "tag": "minecraft:planks"
     }
+  ],
+  "result": {
+    "item": "dnkforge:dnk_block",
+    "count": 2
+  }
 }
