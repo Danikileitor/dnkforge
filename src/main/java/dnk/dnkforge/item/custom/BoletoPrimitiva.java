@@ -2,6 +2,7 @@ package dnk.dnkforge.item.custom;
 
 import java.util.Arrays;
 
+import dnk.dnkforge.item.ModItems;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
@@ -30,19 +31,22 @@ public class BoletoPrimitiva extends Item {
                     }
                     for (int i = 0; i < boleto.length; i++) {
                         if (estaRepetido(boleto[i], boleto, i)) {
-                            player.sendSystemMessage(Component.literal("Escoge tus 6 números en un yunque, separados por un espacio cada uno."));
+                            player.sendSystemMessage(Component.translatable("item.dnkforge.boleto_primitiva.error"));
                             repetido = true;
                             break;
                         }
                     }
                     if (!repetido) {
-                        mostrarAciertos(player, generarBoletoGanador(player), boleto);
+                        int aciertos = mostrarAciertos(player, generarBoletoGanador(player), boleto);
+                        if (aciertos == 6) {
+                            player.addItem(new ItemStack(ModItems.PRIMITIVA.get()));
+                        }
                     }
                 } else {
-                    player.sendSystemMessage(Component.literal("Escoge tus 6 números en un yunque, separados por un espacio cada uno."));
+                    player.sendSystemMessage(Component.translatable("item.dnkforge.boleto_primitiva.error"));
                 }
             } else {
-                player.sendSystemMessage(Component.literal("Escoge tus 6 números en un yunque, separados por un espacio cada uno."));
+                player.sendSystemMessage(Component.translatable("item.dnkforge.boleto_primitiva.error"));
             }
             player.getCooldowns().addCooldown(this, 100);
         }
@@ -79,12 +83,14 @@ public class BoletoPrimitiva extends Item {
         return aciertos;
     }
 
-    public static void mostrarAciertos(Player player, int[] numeros1, int[] numeros2) {
+    public static int mostrarAciertos(Player player, int[] numeros1, int[] numeros2) {
         String mensaje = new String("");
         Component traducido = Component.translatable("item.dnkforge.boleto_primitiva.aciertos");
         mensaje += traducido.getString();
-        mensaje += comprobarAciertos(numeros1, numeros2);
+        int aciertos = comprobarAciertos(numeros1, numeros2);
+        mensaje += aciertos;
         player.sendSystemMessage(Component.literal(mensaje));
+        return aciertos;
     }
 
     public static int[] generarBoletoGanador(Player player) {

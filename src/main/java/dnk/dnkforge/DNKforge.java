@@ -56,6 +56,7 @@ public class DNKforge
             event.accept(ModItems.NIGHT_VISION);
             event.accept(ModItems.LAPISLAZULISWORD);
             event.accept(ModItems.BOLETO_PRIMITIVA);
+            event.accept(ModItems.PRIMITIVA);
         }
 
         if (event.getTab() == CreativeModeTabs.BUILDING_BLOCKS) {

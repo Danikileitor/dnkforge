@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "dnkforge:primitiva"
+    },
+    "title": {
+      "translate": "advancements.dnkforge.primitiva.title"
+    },
+    "description": {
+      "translate": "advancements.dnkforge.primitiva.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "dnkforge:root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["dnkforge:primitiva"]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 825
+  }
+}

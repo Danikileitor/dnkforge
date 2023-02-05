@@ -7,6 +7,8 @@
     "item.dnkforge.boleto_primitiva.combinacion": "The winning numbers are: ",
     "item.dnkforge.boleto_primitiva.boleto": "Your participation numbers are: ",
     "item.dnkforge.boleto_primitiva.aciertos": "Your number of hits is: ",
+    "item.dnkforge.boleto_primitiva.error": "Pick your 6 numbers on an anvil, separated by a space each.",
+    "item.dnkforge.primitiva": "State lottery",
     "block.dnkforge.dnk_block": "Encarnita",
     "entity.minecraft.villager.dnkforge.vendedor_loteria": "Lottery seller",
     "enchantment.dnkforge.nightvision": "Night Vision",
@@ -17,5 +19,7 @@
     "advancements.dnkforge.nightvision.title": "Night Vision",
     "advancements.dnkforge.nightvision.description": "Get your first Night Vision helmet",
     "advancements.dnkforge.lapislazulisword.title": "Lapislazuli Sword!",
-    "advancements.dnkforge.lapislazulisword.description": "Get your first Lapislazuli Sword"
+    "advancements.dnkforge.lapislazulisword.description": "Get your first Lapislazuli Sword",
+    "advancements.dnkforge.primitiva.title": "State Lottery Winner!",
+    "advancements.dnkforge.primitiva.description": "Achieve 6 hits in state lottery"
 }

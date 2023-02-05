@@ -5,6 +5,8 @@
     "item.dnkforge.boleto_primitiva.combinacion": "La combinación ganadora es: ",
     "item.dnkforge.boleto_primitiva.boleto": "Sus números son: ",
     "item.dnkforge.boleto_primitiva.aciertos": "El número de aciertos que has consegido es: ",
+    "item.dnkforge.boleto_primitiva.error": "Escoge tus 6 números en un yunque, separados por un espacio cada uno.",
+    "item.dnkforge.primitiva": "Primitiva",
     "entity.minecraft.villager.dnkforge.vendedor_loteria": "Vendedor de lotería",
     "enchantment.dnkforge.nightvision": "Visión Nocturna",
     "advancements.dnkforge.root.description": "No sabes lo que te espera...",
@@ -13,5 +15,7 @@
     "advancements.dnkforge.nightvision.title": "Visión Nocturna",
     "advancements.dnkforge.nightvision.description": "Consigue tu primer casco con Visión Nocturna",
     "advancements.dnkforge.lapislazulisword.title": "¡Espada de Lapislázuli!",
-    "advancements.dnkforge.lapislazulisword.description": "Consigue tu primera espada de lapislázuli"
+    "advancements.dnkforge.lapislazulisword.description": "Consigue tu primera espada de lapislázuli",
+    "advancements.dnkforge.primitiva.title": "¡Gordo de La Primitiva!",
+    "advancements.dnkforge.primitiva.description": "Acierta los 6 números de La Primitiva"
 }

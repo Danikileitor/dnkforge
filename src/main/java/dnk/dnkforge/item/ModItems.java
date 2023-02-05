@@ -17,6 +17,7 @@ public class ModItems {
     public static final RegistryObject<Item> NIGHT_VISION = ITEMS.register("night_vision", () -> new Item(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> LAPISLAZULISWORD = ITEMS.register("lapislazulisword", () -> new SwordItem(Tiers.DIAMOND, 10, 5f, new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> BOLETO_PRIMITIVA = ITEMS.register("boleto_primitiva", () -> new BoletoPrimitiva(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> PRIMITIVA = ITEMS.register("primitiva", () -> new Item(new Item.Properties().stacksTo(1)));
 
     public static void register(IEventBus modEventBus) {
         ITEMS.register(modEventBus);
