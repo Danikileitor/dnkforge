@@ -1,14 +1,13 @@
 package dnk.dnkforge;
 
 import com.mojang.logging.LogUtils;
-
 import dnk.dnkforge.block.ModBlocks;
 import dnk.dnkforge.enchantment.ModEnchantments;
 import dnk.dnkforge.item.ModCreativeModeTabs;
 import dnk.dnkforge.item.ModItems;
+import dnk.dnkforge.villager.ModVillagers;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.CreativeModeTabEvent;
@@ -19,7 +18,6 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.registries.ForgeRegistries;
 import org.slf4j.Logger;
 
 @Mod(DNKforge.MODID)
@@ -36,6 +34,7 @@ public class DNKforge
         ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
         ModEnchantments.register(modEventBus);
+        ModVillagers.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
@@ -44,7 +43,9 @@ public class DNKforge
     private void commonSetup(final FMLCommonSetupEvent event)
     {
         LOGGER.info("HELLO FROM COMMON SETUP");
-        LOGGER.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT));
+        event.enqueueWork(() -> {
+            ModVillagers.registerPOIs();
+        });
     }
 
     private void addCreative(CreativeModeTabEvent.BuildContents event)
@@ -54,6 +55,7 @@ public class DNKforge
             event.accept(ModItems.DNK_ITEM);
             event.accept(ModItems.NIGHT_VISION);
             event.accept(ModItems.LAPISLAZULISWORD);
+            event.accept(ModItems.BOLETO_PRIMITIVA);
         }
 
         if (event.getTab() == CreativeModeTabs.BUILDING_BLOCKS) {
@@ -77,7 +79,6 @@ public class DNKforge
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-            // Some client setup code
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
         }

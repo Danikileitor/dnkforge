@@ -1,6 +1,11 @@
 {
     "item.dnkforge.night_vision": "Visión Nocturna",
     "item.dnkforge.lapislazulisword": "Espada de lapislázuli",
+    "item.dnkforge.boleto_primitiva": "Boleto de La Primitiva",
+    "item.dnkforge.boleto_primitiva.combinacion": "La combinación ganadora es: ",
+    "item.dnkforge.boleto_primitiva.boleto": "Sus números son: ",
+    "item.dnkforge.boleto_primitiva.aciertos": "El número de aciertos que has consegido es: ",
+    "entity.minecraft.villager.dnkforge.vendedor_loteria": "Vendedor de lotería",
     "enchantment.dnkforge.nightvision": "Visión Nocturna",
     "advancements.dnkforge.root.description": "No sabes lo que te espera...",
     "advancements.dnkforge.encarnita.title": "¡Eso no tiene css!",
