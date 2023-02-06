@@ -12,6 +12,7 @@
     "item.dnkforge.boleto_primitiva.hover": "Press SHIFT for more info",
     "item.dnkforge.primitiva": "State lottery",
     "block.dnkforge.dnk_block": "Encarnita",
+    "block.dnkforge.lottery_station": "Lottery Station",
     "entity.minecraft.villager.dnkforge.vendedor_loteria": "Lottery seller",
     "enchantment.dnkforge.nightvision": "Night Vision",
     "advancements.dnkforge.root.title": "DNK Forge",

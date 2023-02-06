@@ -9,6 +9,7 @@
     "item.dnkforge.boleto_primitiva.info": "Click derecho para jugar a La Primitiva",
     "item.dnkforge.boleto_primitiva.hover": "Presiona SHIFT para más información",
     "item.dnkforge.primitiva": "Primitiva",
+    "block.dnkforge.lottery_station": "Administación de lotería",
     "entity.minecraft.villager.dnkforge.vendedor_loteria": "Vendedor de lotería",
     "enchantment.dnkforge.nightvision": "Visión Nocturna",
     "advancements.dnkforge.root.description": "No sabes lo que te espera...",

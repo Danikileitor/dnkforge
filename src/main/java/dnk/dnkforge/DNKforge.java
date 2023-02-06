@@ -55,12 +55,17 @@ public class DNKforge
             event.accept(ModItems.DNK_ITEM);
             event.accept(ModItems.NIGHT_VISION);
             event.accept(ModItems.LAPISLAZULISWORD);
+            event.accept(ModBlocks.LOTTERY_STATION);
             event.accept(ModItems.BOLETO_PRIMITIVA);
             event.accept(ModItems.PRIMITIVA);
         }
 
         if (event.getTab() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.DNK_BLOCK);
+        }
+
+        if (event.getTab() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
+            event.accept(ModBlocks.LOTTERY_STATION);
         }
 
         if (event.getTab() == CreativeModeTabs.COMBAT) {
