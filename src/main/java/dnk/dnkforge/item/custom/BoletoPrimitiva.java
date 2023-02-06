@@ -3,7 +3,9 @@ package dnk.dnkforge.item.custom;
 import java.util.Arrays;
 import java.util.List;
 import javax.annotation.Nullable;
+
 import dnk.dnkforge.item.ModItems;
+import dnk.dnkforge.util.ModUtils;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
@@ -34,7 +36,7 @@ public class BoletoPrimitiva extends Item {
                         boleto[i] = Integer.parseInt(numeros[i]);
                     }
                     for (int i = 0; i < boleto.length; i++) {
-                        if (estaRepetido(boleto[i], boleto, i) || boleto[i] < 1 || boleto[i] > 49) {
+                        if (ModUtils.estaRepetido(boleto[i], boleto, i) || boleto[i] < 1 || boleto[i] > 49) {
                             player.sendSystemMessage(Component.translatable("item.dnkforge.boleto_primitiva.error"));
                             repetido = true;
                             break;
@@ -45,6 +47,7 @@ public class BoletoPrimitiva extends Item {
                         if (aciertos == 6) {
                             player.addItem(new ItemStack(ModItems.PRIMITIVA.get()));
                         }
+                        player.getCooldowns().addCooldown(this, 100);
                     }
                 } else {
                     player.sendSystemMessage(Component.translatable("item.dnkforge.boleto_primitiva.error"));
@@ -52,7 +55,6 @@ public class BoletoPrimitiva extends Item {
             } else {
                 player.sendSystemMessage(Component.translatable("item.dnkforge.boleto_primitiva.error"));
             }
-            player.getCooldowns().addCooldown(this, 100);
         }
 
         return super.use(level, player, hand);
@@ -66,43 +68,14 @@ public class BoletoPrimitiva extends Item {
             components.add(Component.translatable("item.dnkforge.boleto_primitiva.hover").withStyle(ChatFormatting.YELLOW));
         }
 
-        super.appendHoverText(stack, level, components, flag);        
-    }
-
-    public static int generarAleatorio(int min, int max) {
-        return (int) Math.floor(Math.random() * (max - min + 1) + min);
-    }
-
-    public static boolean estaRepetido(int numero, int[] numeros, int pos) {
-        boolean repetido = false;
-        for (int i = 0; i < numeros.length; i++) {
-            if (i == pos) {
-                continue;
-            }
-            if (numero == numeros[i]) {
-                repetido = true;
-            }
-        }
-        return repetido;
-    }
-
-    public static int comprobarAciertos(int[] numeros1, int[] numeros2) {
-        int aciertos = 0;
-        for (int i = 0; i < numeros1.length; i++) {
-            for (int j = 0; j < numeros2.length; j++) {
-                if (numeros1[i] == numeros2[j]) {
-                    aciertos++;
-                }
-            }
-        }
-        return aciertos;
+        super.appendHoverText(stack, level, components, flag);
     }
 
     public static int mostrarAciertos(Player player, int[] numeros1, int[] numeros2) {
         String mensaje = new String("");
         Component traducido = Component.translatable("item.dnkforge.boleto_primitiva.aciertos");
         mensaje += traducido.getString();
-        int aciertos = comprobarAciertos(numeros1, numeros2);
+        int aciertos = ModUtils.comprobarAciertos(numeros1, numeros2);
         mensaje += aciertos;
         player.sendSystemMessage(Component.literal(mensaje));
         return aciertos;
@@ -118,8 +91,8 @@ public class BoletoPrimitiva extends Item {
         }
         for (int i = 0; i < ganador.length; i++) {
             do {
-                ganador[i] = generarAleatorio(1, 49);
-            } while (estaRepetido(ganador[i], ganador, i));
+                ganador[i] = ModUtils.generarAleatorio(1, 49);
+            } while (ModUtils.estaRepetido(ganador[i], ganador, i));
         }
         Arrays.sort(ganador);
         for (int i = 0; i < ganador.length; i++) {

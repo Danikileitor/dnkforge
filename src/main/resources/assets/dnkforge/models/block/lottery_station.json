@@ -3,7 +3,8 @@
 	"textures": {
 		"1": "dnkforge:block/console_1b",
 		"2": "dnkforge:block/tech_0a",
-		"3": "dnkforge:block/rivet_1a"
+		"3": "dnkforge:block/rivet_1a",
+		"particle": "dnkforge:block/rivet_1a"
 	},
 	"elements": [
 		{

@@ -24,5 +24,7 @@
     "advancements.dnkforge.lapislazulisword.title": "Lapislazuli Sword!",
     "advancements.dnkforge.lapislazulisword.description": "Get your first Lapislazuli Sword",
     "advancements.dnkforge.primitiva.title": "State Lottery Winner!",
-    "advancements.dnkforge.primitiva.description": "Achieve 6 hits in state lottery"
+    "advancements.dnkforge.primitiva.description": "Achieve 6 hits in state lottery",
+    "key.category.dnkforge.dnkforge": "DNK Forge",
+    "key.dnkforge.dnk": "DNK key"
 }
