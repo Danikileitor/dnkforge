@@ -6,6 +6,8 @@
     "item.dnkforge.boleto_primitiva.boleto": "Sus números son: ",
     "item.dnkforge.boleto_primitiva.aciertos": "El número de aciertos que has consegido es: ",
     "item.dnkforge.boleto_primitiva.error": "Escoge tus 6 números en un yunque, separados por un espacio cada uno.",
+    "item.dnkforge.boleto_primitiva.info": "Click derecho para jugar a La Primitiva",
+    "item.dnkforge.boleto_primitiva.hover": "Presiona SHIFT para más información",
     "item.dnkforge.primitiva": "Primitiva",
     "entity.minecraft.villager.dnkforge.vendedor_loteria": "Vendedor de lotería",
     "enchantment.dnkforge.nightvision": "Visión Nocturna",
