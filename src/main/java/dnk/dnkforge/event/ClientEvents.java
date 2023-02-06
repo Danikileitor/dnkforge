@@ -17,7 +17,7 @@ public class ClientEvents {
         @SubscribeEvent
         public static void onKeyInput(InputEvent.Key event){
             if (KeyBinding.DNK_KEY.consumeClick()) {
-                Minecraft.getInstance().player.sendSystemMessage(Component.literal("Pulsaste " + (char)event.getKey()));
+                Minecraft.getInstance().player.sendSystemMessage(Component.literal("" + (char)event.getKey()));
             }
         }
     }
