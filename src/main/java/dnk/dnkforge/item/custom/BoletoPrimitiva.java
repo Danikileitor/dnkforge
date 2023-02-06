@@ -30,7 +30,7 @@ public class BoletoPrimitiva extends Item {
                         boleto[i] = Integer.parseInt(numeros[i]);
                     }
                     for (int i = 0; i < boleto.length; i++) {
-                        if (estaRepetido(boleto[i], boleto, i)) {
+                        if (estaRepetido(boleto[i], boleto, i) || boleto[i] < 1 || boleto[i] > 49) {
                             player.sendSystemMessage(Component.translatable("item.dnkforge.boleto_primitiva.error"));
                             repetido = true;
                             break;
@@ -103,7 +103,7 @@ public class BoletoPrimitiva extends Item {
         }
         for (int i = 0; i < ganador.length; i++) {
             do {
-                ganador[i] = generarAleatorio(0, 49);
+                ganador[i] = generarAleatorio(1, 49);
             } while (estaRepetido(ganador[i], ganador, i));
         }
         Arrays.sort(ganador);
