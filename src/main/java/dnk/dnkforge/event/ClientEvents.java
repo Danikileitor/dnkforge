@@ -13,6 +13,7 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 public class ClientEvents {
     @EventBusSubscriber(modid = DNKforge.MODID, value = Dist.CLIENT)
     public static class ClientForgeEvents {
+        @SuppressWarnings({"resource", "null"})
         @SubscribeEvent
         public static void onKeyInput(InputEvent.Key event){
             if (KeyBinding.DNK_KEY.consumeClick()) {
