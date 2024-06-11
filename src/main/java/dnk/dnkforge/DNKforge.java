@@ -44,9 +44,6 @@ public class DNKforge
     private void commonSetup(final FMLCommonSetupEvent event)
     {
         LOGGER.info("HELLO FROM COMMON SETUP");
-        event.enqueueWork(() -> {
-            ModVillagers.registerPOIs();
-        });
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event)
